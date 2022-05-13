@@ -1,0 +1,40 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<lightning:card title="Inserir Nova Conta">
+    	<lightning:recordEditForm aura:id="recordEditForm"
+                           objectApiName="Account"
+        					onsuccess="{!c.handleSuccess}">
+        
+        <div class="slds-grid slds-gutters">
+  			<div class="slds-col">
+    			<lightning:inputField fieldName="Name" />
+               	<lightning:inputField fieldName="ParentId"/>
+               	<lightning:inputField fieldName="AccountNumber"/>
+                <lightning:inputField fieldName="Site"/>
+                <lightning:inputField fieldName="Type"/>
+                <lightning:inputField fieldName="Industry"/>
+                <lightning:inputField fieldName="AnnualRevenue"/>
+        		<lightning:inputField fieldName="Celular_del__c" />
+                <lightning:inputField fieldName="CNPJ__c"/>
+                <lightning:inputField fieldName="VIP__c"/>
+            </div>
+            
+  			<div class="slds-col">
+   				<!-- campos para acrscentar durante nosso preenchimento do formulário -->
+                <lightning:inputField fieldName="Rating"/>
+                <lightning:inputField fieldName="Phone"/>
+                <lightning:inputField fieldName="Fax"/>
+                <lightning:inputField fieldName="Website" />          
+                <lightning:inputField fieldName="TickerSymbol"/>                
+                <lightning:inputField fieldName="Ownership"/>
+                <lightning:inputField fieldName="Fax"/>
+                <lightning:inputField fieldName="Sic"/>
+
+ 		 	</div>
+            
+		</div>
+          	<lightning:button class="slds-m-top_small" type="submit" label="Create new" />
+
+        </lightning:recordEditForm>
+    </lightning:card>
+       
+</aura:component>
