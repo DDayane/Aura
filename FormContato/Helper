@@ -1,0 +1,12 @@
+({
+	Mensagem : function(component) {
+        
+        var toastEvent = $A.get("e.force:showToast");
+        toastEvent.setParams({
+            "type":"success",
+            "title":"Success!",
+            "message":"Boa...Lindeza!"
+        });
+        toastEvent.fire();		
+	}
+})
